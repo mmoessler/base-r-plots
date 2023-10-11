@@ -5,7 +5,6 @@ This repository contains *R*-functions to generate good looking graphs using bas
 ## Examples
 
 ````
-
 source("base_r_plots_functions.R")
 
 library(AER)
@@ -46,8 +45,6 @@ ts_plot_fun(x.axi.tic.01 = x.axi.tic.01, x.axi.tic.02 = x.axi.tic.02,
 lines(x = seq.Date(from = as.Date("1955-01-01"), to = as.Date("1988-10-01"), by = "1 quarter"),
       y = c(UKNonDurables),
       type = "l")
-
-
 ````
 
 <div style="text-align: center;">
