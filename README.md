@@ -50,4 +50,6 @@ lines(x = seq.Date(from = as.Date("1955-01-01"), to = as.Date("1988-10-01"), by 
 
 ````
 
-<img src="ts_plot_example.svg" width="500" height="500">
+<div style="text-align: center;">
+    <img src="ts_plot_example.svg" width="500" height="500">
+</div>
