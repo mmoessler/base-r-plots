@@ -4,7 +4,7 @@ This repository contains *R*-functions to generate good looking graphs using bas
 
 ## Examples
 
-``
+````
 
 source("base_r_plots_functions.R")
 
@@ -48,6 +48,6 @@ lines(x = seq.Date(from = as.Date("1955-01-01"), to = as.Date("1988-10-01"), by 
       type = "l")
 
 
-``
+````
 
 <img src="ts_plot_example.svg" width="300" height="200">
