@@ -1,8 +1,9 @@
 
-plot_new_fun <- function(x.axi.tic.01, x.axi.tic.02, y.axi.tic.01, y.axi.tic.02,
-                         main = "", sub = "", xlab = "", ylab = "",
-                         x.mar = 0, y.mar = 0,
-                         par.inp = NULL) {
+ts_plot_fun <- function(x.axi.tic.01, x.axi.tic.02, y.axi.tic.01, y.axi.tic.02,
+                        x.axi.tic.02.lab = NULL, y.axi.tic.02.lab = NULL,
+                        main = "", sub = "", xlab = "", ylab = "",
+                        x.mar = 0, y.mar = 0,
+                        par.inp = NULL) {
   
   if (!is.null(par.inp)) {
     par()$mfrow <- par.inp$mfrow
@@ -34,10 +35,18 @@ plot_new_fun <- function(x.axi.tic.01, x.axi.tic.02, y.axi.tic.01, y.axi.tic.02,
   
   # x-axis
   axis.Date(side = 1, at = x.axi.tic.01, labels = FALSE, tck = -0.01)
-  axis.Date(side = 1, at = x.axi.tic.02, labels = TRUE, tck = -0.02)
+  if (is.null(x.axi.tic.02.lab)) {
+    axis.Date(side = 1, at = x.axi.tic.02, labels = TRUE, tck = -0.02)
+  } else {
+    axis.Date(side = 1, at = x.axi.tic.02, labels = x.axi.tic.02.lab, tck = -0.02)
+  }
   
   # y-axis
   axis(side = 2, at = y.axi.tic.01, labels = FALSE, tck = -0.01)
-  axis(side = 2, at = y.axi.tic.02, labels = TRUE, tck = -0.02)
+  if (is.null(y.axi.tic.02.lab)) {
+    axis(side = 2, at = y.axi.tic.02, labels = TRUE, tck = -0.02)
+  } else {
+    axis(side = 2, at = y.axi.tic.02, labels = y.axi.tic.02.lab, tck = -0.02)
+  }
   
 }
